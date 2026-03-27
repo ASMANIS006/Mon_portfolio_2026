@@ -146,4 +146,58 @@ section h2::after {
     font-size: 1.3rem;
 }
 
+.mescompetence table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.mescompetence table th, .mescompetence table td{
+    padding: 15px;
+}
+.mescompetence table thead{
+    background-color: var(--violet-doux);
+    color: #fff;
+    text-transform: uppercase;
+}
+.mescompetence table thead tr{
+    text-align: left;
+}
+.mescompetence table tbody td{
+    border-bottom: 1px solid var(--gris-CLAIR);
+}
+.mescompetence table tbody tr::nth-child(even){
+    background-color: #FDFDFD;
+}
+.mescompetence table tbody tr{
+    transition: background-color 0.3s ease;
+}
+.mescompetence table tbody tr:hover{
+    background-color: #F6F6F6;
+}
+footer {
+    margin-top: 3rem;
+    background-color: var(--violet-doux);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+footer p {
+    margin-bottom: 1.2rem;
+}
+footer a {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: white;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+footer a:hover {
+    color: orange;
+    transform: translateY(-3px);
+}
+
 
