@@ -36,7 +36,7 @@ header div a {
 }
 ul li {
     list-style: none;
-    margin-left: 15px;
+    margin-left: 20px;
 }
 ul{
     display: flex;
@@ -86,13 +86,13 @@ margin-top: 10rem;
     height: 200px;
     object-fit: cover;
     object-position: top;
-    border-radius: 100px;
+    border-radius: 200px;
     border: 5px soLid var(--violet-fonce);
 }
 
 .hero h1{
     color: var(--violet-doux);
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 700;
     margin: bottom 1.2rem;
 }
@@ -200,4 +200,20 @@ footer a:hover {
     transform: translateY(-3px);
 }
 
+.titre{
+    color: var(--violet-doux);
+    font-size: 2.6rem;
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+}
+.titre::after{
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color:var(--violet-doux);
+    margin: 1.2rem auto;
+    border-radius: 2px;
+}
 
