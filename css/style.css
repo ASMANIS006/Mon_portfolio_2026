@@ -407,31 +407,41 @@ footer a:hover {
 .mesprojets .links a:hover {
     text-decoration: underline;
 }
+/* --- Styles Communs pour la page Passion --- */
 .passions-container {
     padding: 60px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.passions-container {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+.skills-section, .funfacts-section {
+    margin-top: 80px;
+    margin-bottom: 60px;
 }
 
-.passions-header {
+.subsection-header {
     text-align: center;
     margin-bottom: 50px;
+    position: relative;
 }
 
-.passions-header h2 {
-    font-size: 2.5rem;
+.subsection-header h3 {
+    font-size: 2.2rem;
     color: var(--violet-doux);
-    margin-bottom: 15px;
+    font-weight: 700;
+    margin-bottom: 5px;
     position: relative;
     display: inline-block;
 }
 
+.subsection-header p {
+    color: var(--gris-fonce);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Soulignement stylisé pour les sous-titres */
 .passions-header h2::after {
     content: '';
     display: block;
@@ -444,12 +454,40 @@ footer a:hover {
 
 .passions-header p {
     color: var(--gris-fonce);
-    font-size: 1.1rem;
+    font-size: 1.4rem;
+    margin: 0 0 1.5rem 1.5rem;
 }
 
+.subsection-header h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--violet-doux);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Classe générique pour l'effet de survol des cartes */
+.card-hover {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1px solid var(--gris-CLAIR);
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(108, 99, 255, 0.1);
+    border-color: var(--violet-doux);
+}
+
+
+/* --- Styles spécifiques: Cartes de Passion initiales --- */
 .passions-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
 }
 
@@ -465,10 +503,18 @@ footer a:hover {
     flex-direction: column;
 }
 
-.passion-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(108, 99, 255, 0.1);
-    border-color: var(--violet-doux);
+.passion-item h3 {
+    color: var(--gris-tres-fonce);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.passion-item p {
+    color: var(--gris-fonce);
+    line-height: 1.7;
+    font-size: 0.95rem;
+    flex-grow: 1;
 }
 
 .image-box {
@@ -481,8 +527,8 @@ footer a:hover {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    transition: background 0.3s, transform 0.3s;
     border: 3px solid #f3f2ff;
+    transition: transform 0.3s ease;
 }
 
 .passion-item:hover .image-box {
@@ -498,24 +544,114 @@ footer a:hover {
     transition: opacity 0.3s;
 }
 
-.passion-item:hover .image-box img {
-    opacity: 0.8;
+
+/* --- Styles spécifiques: Expertise (Technical Expertise) --- */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
 }
 
-.passion-item h3 {
+.expertise-item {
+    padding: 30px;
+    text-align: center;
+}
+
+.skill-icon {
+    width: 64px; /* Ajuste selon la taille de tes icônes */
+    height: 64px;
+    margin-bottom: 20px;
+}
+
+.expertise-item h4 {
     color: var(--gris-tres-fonce);
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
-.passion-item p {
+.expertise-item p {
     color: var(--gris-fonce);
-    line-height: 1.8;
-    font-size: 0.95rem;
-    flex-grow: 1;
+    font-size: 0.9rem;
 }
-.divertissement-container {
+
+
+/* --- Styles spécifiques: Technologies I Use (Logos) --- */
+.tech-logos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.logo-circle {
+    width: 90px;
+    height: 90px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--gris-CLAIR);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(108, 99, 255, 0.15);
+    border-color: var(--violet-doux);
+}
+
+.logo-circle img {
+    max-width: 60%;
+    max-height: 60%;
+    object-fit: contain;
+}
+
+
+/* --- Styles spécifiques: Fun Facts --- */
+.funfacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.fact-item {
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white; /* Texte en blanc pour contraster avec le fond coloré */
+}
+
+/* Couleurs de fond pour chaque carte de fait */
+.fact-blue { background-color: #337ab7; }   /* Bleu similaire image */
+.fact-orange { background-color: #ffa726; } /* Orange similaire image */
+.fact-green { background-color: #4ebedd; }  /* Vert similaire image */
+.fact-red { background-color: #6c63ff; }    /* Rouge similaire image */
+
+/* Icônes dans les Fun Facts */
+.fact-item i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.fact-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.fact-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9; /* Légère transparence pour le label */
+}.divertissement-container {
     padding: 60px 20px;
     max-width: 1200px;
     margin: 0 auto;
